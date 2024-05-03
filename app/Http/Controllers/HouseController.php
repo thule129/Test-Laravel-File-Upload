@@ -39,7 +39,7 @@ class HouseController extends Controller
     public function download(House $house)
     {
         $savedPath = $house->photo;
-        Storage::download($savedPath);
+        return Storage::download($savedPath);
         // TASK: Return the $house->photo file from "storage/app/houses" folder
         // for download in browser
     }
