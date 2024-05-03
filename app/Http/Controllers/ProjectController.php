@@ -11,7 +11,7 @@ class ProjectController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'logo' => File::image()->max('1mb'),
+            'logo' => File::image()->max('1024'),
             // TASK: Write the validation rule so "logo" file would be MAX 1 megabyte
         ]);
 
